@@ -1,14 +1,36 @@
-type Suit = "Club" | "Diamond" | "Spade" | "Heart";
-type Rank =  "Two" | "Three" | "Four" | "Five" | "Six" | "Seven" | "Eight" | "Nine" | "Ten" | "Jack" | "Queen" | "King" | "Ace"
-type Card = [Suit, Rank] // tuples are not available in ts that's why i used list instead of tuple
+export type Suit = 'Club' | 'Diamond' | 'Spade' | 'Heart';
+export type Rank =
+	| 'Two'
+	| 'Three'
+	| 'Four'
+	| 'Five'
+	| 'Six'
+	| 'Seven'
+	| 'Eight'
+	| 'Nine'
+	| 'Ten'
+	| 'Jack'
+	| 'Queen'
+	| 'King'
+	| 'Ace';
 
-type Hand = Card[]
-type Deck = Card[]
-type Player = { name: string, hand: Hand} 
-type Game =  { Deck: Deck; Players: Player[] }
+export interface Card {
+	suit: Suit;
+	rank: Rank;
+}
+export type Hand = Card[];
+export type Deck = Card[];
+export interface Player {
+	name: string;
+	hand: Hand;
+}
 
+export interface Game {
+	deck: Deck;
+	players: Player[];
+}
 
-type Deal = (deck: ShuffledDeck) => [ShuffledDeck, Card] // i used return type as list instead of tuple
-type ShuffledDeck = Card[]
-type Shuffle = (deck: Deck) => ShuffledDeck
-type PickupCard = (list: [Hand, Card]) => Hand // i used parameters type as list instead of tuple
+export type ShuffledDeck = Card[];
+export type Deal = (shuffledDeck: ShuffledDeck) => { shuffledDeck: ShuffledDeck; card: Card };
+export type Shuffle = (deck: Deck) => ShuffledDeck;
+export type PickupCard = (hand: Hand, card: Card) => Hand; // i used parameters type as list instead of tuple
