@@ -15,7 +15,6 @@
 		__
 	} from 'ramda';
 
-	const suit = ['Club', 'Diamond', 'Spade', 'Heart'];
 	const fullDeck = () => {
 		const suit = ['Club', 'Diamond', 'Spade', 'Heart'];
 		const rank = range(1, 14);
