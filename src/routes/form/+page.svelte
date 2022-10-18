@@ -1,19 +1,6 @@
 <script>
-	import {
-		applySpec,
-		converge,
-		head,
-		identity,
-		inc,
-		last,
-		map,
-		of,
-		pipe,
-		range,
-		tail,
-		xprod,
-		__
-	} from 'ramda';
+	import { applySpec, head, last, map, pipe, range } from 'rambda';
+	import { xprod } from '$lib/fp';
 
 	const fullDeck = () => {
 		const suit = ['Club', 'Diamond', 'Spade', 'Heart'];
@@ -29,7 +16,7 @@
 
 		// return pipe(deck1, deck2);
 		return pipe(
-			converge(xprod),
+			xprod,
 			map(
 				applySpec({
 					suit: head,

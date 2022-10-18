@@ -34,7 +34,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@types/ramda": "^0.28.16",
-		"ramda": "^0.28.0"
+		"rambda": "^7.3.0"
 	}
 }
