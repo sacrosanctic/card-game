@@ -1,9 +1,8 @@
 <script>
 	import { getUrlParam, setUrlParam } from '$lib/util';
-	import { writable } from 'svelte/store';
+	import { urlStore } from './store';
 
 	const param = 'hp';
-	const urlStore = writable('321');
 
 	// will react to stores
 	$: {
@@ -19,9 +18,9 @@
 	};
 
 	// will react to variable change
-	$: {
-		setUrlParam(param, hp);
-	}
+	// $: {
+	// 	setUrlParam(param, hp);
+	// }
 </script>
 
 <!-- {@debug hp} -->

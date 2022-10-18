@@ -7,6 +7,7 @@ export const getUrlParam = (param: string) => get(page).url.searchParams.get(par
 
 export const setUrlParam = (param: string, data: string) => {
 	if (!browser) return;
+	if (!data) return;
 
 	const url = new URL(get(page).url);
 	url.searchParams.set(param, data);
