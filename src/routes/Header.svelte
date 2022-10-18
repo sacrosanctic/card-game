@@ -28,6 +28,9 @@
 			<li class:active={$page.url.pathname === '/url-states'}>
 				<a href="/url-states">url-states</a>
 			</li>
+			<li class:active={$page.url.pathname === '/ramda-test'}>
+				<a href="/ramda-test">ramda-test</a>
+			</li>
 			<li class:active={$page.url.pathname === '/form'}>
 				<a href="/form">form</a>
 			</li>
