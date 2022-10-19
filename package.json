@@ -18,8 +18,10 @@
 		"@sveltejs/adapter-auto": "^1.0.0-next.80",
 		"@sveltejs/kit": "^1.0.0-next.511",
 		"@types/cookie": "^0.5.1",
+		"@types/ramda": "^0.28.16",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
+		"browserify": "^17.0.0",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -34,6 +36,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"rambda": "^7.3.0"
+		"folktale": "^2.3.2",
+		"rambda": "^7.3.0",
+		"ramda": "^0.28.0"
 	}
 }
